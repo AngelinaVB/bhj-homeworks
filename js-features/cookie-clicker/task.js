@@ -6,10 +6,11 @@ let counterSpeed = document.createTextNode("Скорость клика: "); */
 let count = 0;
 /* let speed = setInterval(function() {count / }, 1000)  */
 image.onclick = function clickImage() {
+    count++;
+    counter.textContent = count;
+    
     if (image.width == 200) {
         image.width = 250;
-        count++;
-        counter.textContent = count;
         /* counterSpeed.textContent = speed; */
     }
     else { image.width = 200 };
