@@ -14,6 +14,8 @@ for (let index = 1; index <= 9; index++) {
                 alert("Вы выиграли!");
                 kill.textContent = 0;
                 miss.textContent = 0;
+                countKill = 0;
+                countLost = 0;
             }
             else { return; }
         }
@@ -24,6 +26,8 @@ for (let index = 1; index <= 9; index++) {
                 alert("Вы проиграли!");
                 kill.textContent = 0;
                 miss.textContent = 0;
+                countKill = 0;
+                countLost = 0;
             }
             else { return; }
         };
