@@ -1,5 +1,5 @@
 let timer = 59;
-/* let timerFormat = new Date (timer * 1000).toISOString().slice(11,19); */
+
 let count;
 countDown();
 
