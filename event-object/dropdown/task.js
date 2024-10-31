@@ -1,18 +1,21 @@
 let a = document.getElementsByClassName('dropdown__value');
-let aArr = Array.from(a);
 let b = document.querySelectorAll('ul');
-let bArr = Array.from(b);
-let c = document.querySelectorAll('li');
+let c = document.getElementsByClassName('dropdown__item');
 let cArr = Array.from(c);
+let link = document.querySelectorAll('a');
 
-aArr[0].addEventListener('click', function () {
-    bArr[0].classList.toggle('dropdown__list_active');
 
-    for (let i = 0; i < 4; i++) {
-        if (cArr[0].classList.contains('dropdown__list_active')) {
-            aArr[0].textContent = cArr[i].textContent;
-            alert(cArr[i]);
-        }
+a[0].addEventListener('click', function () {
+    b[0].classList.add('dropdown__list_active');
 
-    }
+   /*  if () {
+        a[0].textContent = c[].textContent;
+        
+    } */
 });
+
+
+
+
+console.log(cArr[1].textContent);
+console.log(a[0].textContent);
