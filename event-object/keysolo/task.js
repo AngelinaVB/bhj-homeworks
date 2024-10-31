@@ -17,17 +17,18 @@ class Game {
   }
 
   registerEvents() {
-    for (let i = 0; i < this.getWord; i++) {
-      this.currentSymbol = this.renderWord[i];
-    }
+    /* for (let i = 0; i < this.getWord; i++) {
+      this.currentSymbol.textContent = this.renderWord[i];
+    }; */
+    let a = this.currentSymbol.textContent;
 
     document.addEventListener('keydown', function (event) {
-      if (event.key == this.currentSymbol) {
-        console.log(event.key);
-        this.success();
-      }
-      /* else { this.fail() }; */
 
+      if (event.key == a) {
+        this.success;
+        return;
+      }
+      else { this.fail };
     });
 
 
