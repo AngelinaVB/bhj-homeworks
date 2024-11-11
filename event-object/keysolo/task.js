@@ -17,21 +17,13 @@ class Game {
   }
 
   registerEvents() {
-    /* for (let i = 0; i < this.getWord; i++) {
-      this.currentSymbol.textContent = this.renderWord[i];
-    }; */
-    let a = this.currentSymbol.textContent;
-
-    document.addEventListener('keydown', function (event) {
-
-      if (event.key == a) {
-        this.success;
-        return;
+    document.addEventListener('keydown', (event) => {
+      let textCurrentSymbol = this.currentSymbol.textContent;
+      if (event.key !== textCurrentSymbol) {
+        this.fail();
       }
-      else { this.fail };
+      else { this.success(); };
     });
-
-
     /*
       TODO:
       Написать обработчик события, который откликается
