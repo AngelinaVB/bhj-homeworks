@@ -12,12 +12,11 @@ for (let i = 0; i < itemValueArr.length; i++) {
         const targetElem = e.target;
         const item = targetElem.closest('.dropdown__item')
         if (item === null) {
-            return;
-        }
-        else {
-            e.preventDefault();
-            selectValue[0].textContent = itemValueArr[i].textContent;
-            listValues.classList.toggle('dropdown__list_active');
+          return;
+        } else {
+          e.preventDefault();
+          selectValue[0].textContent = itemValueArr[i].textContent;
+          listValues.classList.toggle('dropdown__list_active');
         }
     })
 }
