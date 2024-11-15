@@ -21,8 +21,9 @@ class Game {
       let textCurrentSymbol = this.currentSymbol.textContent;
       if (event.key !== textCurrentSymbol) {
         this.fail();
-      }
-      else { this.success(); };
+      } else {
+        this.success();
+      };
     });
     /*
       TODO:
