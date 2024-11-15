@@ -1,19 +1,16 @@
-const elemTab = document.getElementsByClassName('tab');
+const elemTab = document.querySelectorAll('.tab');
 const arrElemTab = Array.from(elemTab);
-const elemContentTab = document.getElementsByClassName('tab__content');
+const elemContentTab = document.querySelectorAll('.tab__content');
 const arrElemContentTab = Array.from(elemContentTab);
-const activeElem = document.getElementsByClassName('tab_active');
-const arrActiveElem = Array.from(activeElem);
+const activeElem = document.querySelector('.tab_active');
+const activeElemContent = document.querySelector('.tab__content_active');
 
-arrElemTab.forEach(arrElemTab => {arrElemTab.addEventListener('click', function()
-{ 
-  if (arrElemTab.indexOf(activeElem) == -1) {
-    return;
-  }
-  else {
-  arrActiveElem.classList.remove('tab_active');
-  arrElemTab.classList.add('tab_active');
-  arrElemContentTab.classList.add('tab__content_active');
-  };
-});
+arrElemTab.forEach((elem, index) => {
+  elem.addEventListener('click', function () {
+    arrElemTab[index].classList.add('tab_active');
+    arrElemContentTab[index].classList.add('tab__content_active');
+    activeElem.classList.remove('tab_active');
+    activeElemContent.classList.remove('tab__content_active');
+    return false;
+  });
 });
