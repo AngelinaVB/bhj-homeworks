@@ -5,21 +5,19 @@ const arrElemContentTab = Array.from(elemContentTab);
 
 
 arrElemTab.forEach((elem, index) => {
-  const activeElem = document.querySelectorAll(`.tab_active${index}`);
-  const arrActiveElem = Array.from(activeElem);
-  const activeElemContent = document.querySelectorAll('.tab__content_active');
-  const arrActiveElemContent = Array.from(activeElemContent);
 
   elem.addEventListener('click', function () {
-    let indexActive = arrElemTab.findIndex((arrActiveElem) => arrActiveElem);
-    console.log(arrElemTab);
-    console.log(indexActive);
+    function indexActive(element) { return element = Array.from(document.getElementsByClassName('tab_active')) };
 
-    arrElemTab[indexActive].classList.remove('tab_active');
-    arrElemContentTab[indexActive].classList.remove('tab__content_active');
+    let idElem = arrElemTab.findIndex(indexActive);
+   
+  
+    arrElemTab[idElem].classList.remove('tab_active');
+    arrElemContentTab[idElem].classList.remove('tab__content_active');
 
     arrElemTab[index].classList.add('tab_active');
     arrElemContentTab[index].classList.add('tab__content_active');
-
   });
+
 });
+
