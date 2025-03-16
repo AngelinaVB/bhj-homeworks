@@ -1,6 +1,5 @@
 const mainPage = document.getElementById('book');
 const textFontSize = Array.from(document.querySelectorAll('.font-size'));
-const dataElements = document.querySelectorAll('[data-size]');
 
 textFontSize.forEach((elem, index) => {
     elem.addEventListener('click', function (event) {
@@ -12,11 +11,11 @@ textFontSize.forEach((elem, index) => {
         textFontSize[idElem].classList.remove('font-size_active');
         textFontSize[index].classList.add('font-size_active');
 
-        if (elem == dataElements[1]) {
-            mainPage.classList.add('book_fs-big');
+        if (textFontSize[0] === elem) {
+            mainPage.classList.add('font-size_small');
         }
-        if (elem == dataElements[0]) {
-            mainPage.classList.add('book_fs-small');
-        }
+        else if (textFontSize[2] === elem) {
+            mainPage.classList.add('font-size_big');
+        };
     });
 });
