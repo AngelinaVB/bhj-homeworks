@@ -7,15 +7,18 @@ textFontSize.forEach((elem, index) => {
 
         function indexActive(element) { return element.classList.contains('font-size_active') };
         let idElem = textFontSize.findIndex(indexActive);
+        let dataElement = event.target.dataset.size;
 
         textFontSize[idElem].classList.remove('font-size_active');
         textFontSize[index].classList.add('font-size_active');
 
-        if (textFontSize[0] === elem) {
-            mainPage.classList.add('font-size_small');
+        switch (dataElement) {
+            case 'small':
+                mainPage.classList.add('book_fs-small');
+                break;
+            case 'big':
+                mainPage.classList.add('book_fs-big');
+                break;
         }
-        else if (textFontSize[2] === elem) {
-            mainPage.classList.add('font-size_big');
-        };
     });
 });
