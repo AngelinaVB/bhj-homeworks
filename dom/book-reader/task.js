@@ -10,6 +10,8 @@ textFontSize.forEach((elem, index) => {
         let dataElement = event.target.dataset.size;
 
         textFontSize[idElem].classList.remove('font-size_active');
+        mainPage.classList.remove('book_fs-small');
+        mainPage.classList.remove('book_fs-big');
         textFontSize[index].classList.add('font-size_active');
 
         switch (dataElement) {
